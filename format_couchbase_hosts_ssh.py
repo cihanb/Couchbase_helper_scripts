@@ -3,8 +3,8 @@ import sys
 import socket
 
 #file=sys.argv[1]
-f = open("couchbase_hosts.txt", 'r')
-lines=sum(1 for line in open("couchbase_hosts.txt"))
+f = open("my_couchbase_hosts.txt", 'r')
+lines=sum(1 for line in open("my_couchbase_hosts.txt"))
 for i in range(0, lines):
 	line = f.readline()
 	if (line[0] == "#"):

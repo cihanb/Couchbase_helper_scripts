@@ -1,0 +1,4 @@
+#ssh_port,admin_account@hostname,cert file
+1,VM_admin_account_name@service_name.cloudapp.net,~/cert_file.key
+2,VM_admin_account_name@service_name.cloudapp.net,~/cert_file.key
+3,VM_admin_account_name@service_name.cloudapp.net,~/cert_file.key
