@@ -1,0 +1,8 @@
+#ssh_port,admin_account@hostname,cert file (escaped for bash output)
+1,cb_vmadmin@couchbase-service.cloudapp.net,~/test.key
+2,cb_vmadmin@couchbase-service.cloudapp.net,~/test.key
+3,cb_vmadmin@couchbase-service.cloudapp.net,~/test.key
+4,cb_vmadmin@couchbase-service.cloudapp.net,~/test.key
+5,cb_vmadmin@couchbase-service.cloudapp.net,~/test.key
+6,cb_vmadmin@couchbase-service.cloudapp.net,~/test.key
+7,cb_vmadmin@couchbase-service.cloudapp.net,~/test.key
