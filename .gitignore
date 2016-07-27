@@ -1,2 +1,3 @@
-# ignore a single file
+# ignored files
 my_couchbase_hosts.txt
+output_couchbase_node_ips.txt
