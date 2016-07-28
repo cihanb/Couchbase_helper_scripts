@@ -7,7 +7,7 @@ if [[ $1 == "" ]]
 then
   echo "Provide a command to run on all nodes."
   echo "Following example confirms there is a listener active on port 8091 across all nodes"
-  echo "  ./exec_command_on_all_nodes.sh 'netstat -a | grep 8091'"
+  echo "  ./exec_command_on_all_nodes.sh 'netstat -a | grep 8091'"``
   exit 0
 fi
 
