@@ -2,8 +2,28 @@
 import sys
 import socket
 
-#my_couchbase_hosts.txt is thee corrected version of the sample_couchbase_hosts.txt file
-f = open("my_couchbase_hosts.txt", 'r')
+#parse commandline
+if (len(sys.argv) == 1):
+	#no argument - fall back to default filename my_couchbase_hosts.txt
+	print ("couchbase_hosts parameter has not been specified. using default name my_couchbase_hosts.txt")
+	hosts_file = "my_couchbase_hosts.txt"
+
+elif ((sys.argv[1] == "-help") or (sys.argv[1] == "-h") or (sys.argv[1] == "--help") or (sys.argv[1] == "-?")):
+	#argument for help
+	print ('''list_couchbase_hosts_ssh.py:
+Script spits out a properly formatted ssh command for all nodes specified through couchbase_hosts file
+Example:
+	python list_couchbase_hosts_ssh.py couchbase_hosts.txt
+
+For details on the formatting of the couchbase_hosts.txt file, see the sample file here: https://raw.githubusercontent.com/cihanb/Couchbase_helper_scripts/master/sample_couchbase_hosts.txt''')
+	sys.exit(0)
+else:
+	#argument for list of couchbase nodes
+	print ("Using hosts file: %s") % sys.argv[1]
+	hosts_file = sys.argv[1]
+
+#open hosts file
+f = open(hosts_file, 'r')
 lines=sum(1 for line in open("my_couchbase_hosts.txt"))
 for i in range(0, lines):
 	line = f.readline()
