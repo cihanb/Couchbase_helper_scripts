@@ -26,8 +26,7 @@ eval $cmd
 for i in ${value[@]}; do
   cmd="$i '$1'"
   echo ""
-  echo "#############################################################################################"
-  echo "# RUNNING: "$cmd
+  echo "${GREEN}# RUNNING: "$cmd"${RESET}"
   node_output=$(eval $cmd)
   cmd="$i 'ifconfig | grep 10.0.0. | cut -d\":\" -f 2 | cut -d\" \" -f 1'"
   node_ip=$(eval $cmd)
